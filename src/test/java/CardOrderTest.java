@@ -25,7 +25,7 @@ public class CardOrderTest {
 
     @Test
     void test() {
-        driver.get("http://localhost:9999");
+        driver.get("http://localhost:9999/");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Перусумкин Даниил");
         elements.get(1).sendKeys("+79342345434");
@@ -37,7 +37,7 @@ public class CardOrderTest {
 
     @Test
     void test1() {
-        driver.get("http://localhost:9999");
+        driver.get("http://localhost:9999/");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Peresumkin Daniil");
         elements.get(1).sendKeys("+79342345434");
