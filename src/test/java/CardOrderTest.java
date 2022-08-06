@@ -1,7 +1,4 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +8,7 @@ import java.util.List;
 
 public class CardOrderTest {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     @BeforeAll
     static void setUp() {
@@ -21,6 +18,12 @@ public class CardOrderTest {
     @BeforeEach
     void setUp1() {
         driver = new ChromeDriver();
+    }
+
+    @AfterEach
+    void close() {
+        driver.quit();
+        driver = null;
     }
 
     @Test
