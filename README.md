@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/27amntu343ijgk77?svg=true)](https://ci.appveyor.com/project/danilka5984ka/wed-interfaces-testing)
