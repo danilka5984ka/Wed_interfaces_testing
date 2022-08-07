@@ -14,9 +14,5 @@ install:
 
 build_script:
   - chmod +x gradlew
-  - ChromeOptions options = new ChromeOptions();
-    options.addArguments("--disable-dev-shm-usage");
-    options.addArguments("--no-sandbox");
-    options.addArguments("--headless");
-    driver = new ChromeDriver(options);
+  - ./gradlew test -Dselenide.headless=true --info
 
