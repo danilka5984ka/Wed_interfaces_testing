@@ -12,14 +12,14 @@ public class CardOrderTest {
 
     private WebDriver driver;
 
-    /*@BeforeAll
+    @BeforeAll
     static void setUp() {
         WebDriverManager.chromedriver().setup();
-    }*/
+    }
 
     @BeforeEach
     void setUp1() {
-        driver = WebDriverManager.chromedriver().create();
+        driver = new ChromeDriver();
     }
 
     @AfterEach
@@ -30,7 +30,7 @@ public class CardOrderTest {
 
     @Test
     void test() {
-        driver.get("http://localhost:9999");
+        driver.get("http://localhost:9999/");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Перусумкин Даниил");
         elements.get(1).sendKeys("+79342345434");
